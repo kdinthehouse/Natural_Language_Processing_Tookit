@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>NLP Tools Web App</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">NLP Tools Web App</h1>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="user_input">Enter Text:</label>
+                <textarea class="form-control" id="user_input" name="user_input" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="lang">Select Language:</label>
+                <select class="form-control" id="lang" name="lang">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <!-- Add more language options as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        {% if result %}
+            <h2 class="mt-4">Results:</h2>
+            <h3>NLTK Results:</h3>
+            <p>Filtered Text (NLTK): {{ result.filtered_text_nltk }}</p>
+            <p>Lemmatized Text (NLTK): {{ result.lemmatized_text_nltk }}</p>
+            <p>Sentiment Score (NLTK): {{ result.sentiment_score_nltk }}</p>
+            <p>Word Frequency (NLTK): {{ result.freq_dist_nltk }}</p>
+
+            <h3>spaCy Results:</h3>
+            <p>Filtered Text (spaCy): {{ result.filtered_text_spacy }}</p>
+            <p>Sentiment Score (spaCy): {{ result.sentiment_score_spacy }}</p>
+            <p>Topics (spaCy): {{ result.topics_spacy }}</p>
+
+            <h3>Word Vector Analysis:</h3>
+            <p>Word Clusters: {{ result.word_clusters }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
