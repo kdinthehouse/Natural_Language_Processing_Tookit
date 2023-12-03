@@ -1,4 +1,10 @@
 from flask import Flask, render_template, request
+import sys
+import os
+
+# Add the following lines to ensure that nltk_tools is in the Python path
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+
 from nltk_tools.text_preprocessing import remove_stopwords, lemmatization
 from nltk_tools.sentiment_analysis import sentiment_analysis
 from nltk_tools.topic_modeling import word_frequency
