@@ -38,3 +38,18 @@ This repository contains extended tools and examples for Natural Language Proces
 
 ```bash
 pip install -r requirements.txt
+
+2. Run the Flask web application:
+
+```bash
+cd web_app
+python app.py
+
+3. Open your web browser and go to
+
+```bash
+http://127.0.0.1:5000/.
+
+Enter text, select language, and explore the NLP results.
+
+Feel free to explore and use these tools and examples for various NLP tasks!
