@@ -34,20 +34,16 @@ This repository contains extended tools and examples for Natural Language Proces
 
 ## Usage
 
-1. Install dependencies:
-
+```bash
+# 1. Install Dependencies
 pip install -r requirements.txt
 
-2. Run the Flask web application:
-
+# 2. Run the Flask Web Application
 cd web_app
 python app.py
 
-3. Open your web browser and go to
+# 3. Open Your Web Browser
+Open your web browser and go to http://127.0.0.1:5000/.
 
-http://127.0.0.1:5000/.
-
-
-Enter text, select language, and explore the NLP results.
-
-Feel free to explore and use these tools and examples for various NLP tasks!
+# 4. Explore NLP Results
+Enter text, select the language, and explore the NLP results.
